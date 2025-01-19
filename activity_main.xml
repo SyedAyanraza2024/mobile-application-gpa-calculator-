@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/download">
+
+    <!-- EditText for entering the number of courses -->
+    <EditText
+        android:id="@+id/numCoursesEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter number of courses"
+        android:textColorHint="#FFFFFF"
+        android:textColor="#FFFFFF"
+        android:inputType="number" />
+
+    <!-- ScrollView to allow scrolling for course inputs -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"> <!-- Ensures ScrollView fills available space -->
+
+        <LinearLayout
+            android:id="@+id/coursesLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp" />
+
+    </ScrollView>
+
+    <!-- Calculate GPA button -->
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculate GPA" />
+
+    <!-- TextView to display the GPA result -->
+    <TextView
+        android:id="@+id/gpaResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your GPA will be displayed here"
+
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:textColor="#000000" />
+
+</LinearLayout>
